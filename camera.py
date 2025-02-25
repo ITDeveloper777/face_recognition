@@ -19,15 +19,11 @@ while True:
     ret, frame = cap.read()
     
     if not ret:
+        print("Fail to read the camera")
         break
+        
+    print(frame_count)
     
-    # Save the first 10 frames
-    if frame_count < 10:
-        cv2.imwrite(f"frame_{frame_count}.jpg", frame)
-        frame_count += 1
-        print(frame_count)
-    else:
-        break
 
 # Release the capture and close all windows
 cap.release()
