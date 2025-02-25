@@ -21,7 +21,7 @@ while True:
     if not ret:
         print("Fail to read the camera")
         break
-        
+    frame_count += 1
     print(frame_count)
     
 
